@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "./Layout.module.css";
-import Contoso from "../../assets/160-1608170_army-war-college-us-army-war-college-crest.png.svg";
+import Contoso from "../../assets/160-1608170_army-war-college-us-army-war-college-crest.png";
 import { CopyRegular, ShareRegular } from "@fluentui/react-icons";
 import { Dialog, Stack, TextField, ICommandBarStyles, IButtonStyles } from "@fluentui/react";
 import { useContext, useEffect, useState } from "react";
@@ -54,6 +54,12 @@ const Layout = () => {
                         />
                         <Link to="/" className={styles.headerTitleContainer}>
                             <h1 className={styles.headerTitle}>{ui?.title}</h1>
+                        </Link>
+                        <Link to="https://www.bing.com" className={styles.body}>
+                            <b className={styles.body}>Go to GPT4.0 site</b>
+                        </Link>
+                        <Link to="/" className={styles.body}>
+                            <b className={styles.body}>Go to GPT3.5 site</b>
                         </Link>
                     </Stack>
                     {ui?.show_share_button &&
